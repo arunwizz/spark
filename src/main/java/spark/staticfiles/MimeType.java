@@ -31,7 +31,10 @@ public class MimeType {
 
     private static volatile boolean guessingOn = true;
 
-    private static Map<String, String> mappings = new HashMap<String, String>() {{
+    private static Map<String, String> mappings = new HashMap<String, String>() {
+		private static final long serialVersionUID = 1L;
+
+	{
         put("au", "audio/basic");
         put("avi", "video/msvideo,video/avi,video/x-msvideo");
         put("bmp", "image/bmp");
@@ -48,6 +51,7 @@ public class MimeType {
         put("gz", "application/x-gzip");
         put("ico", "image/x-icon");
         put("hqx", "application/mac-binhex40");
+        put("htm", "text/html");
         put("html", "text/html");
         put("jar", "application/java-archive");
         put("jpg", "image/jpeg");
